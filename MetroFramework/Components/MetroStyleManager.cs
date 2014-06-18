@@ -218,6 +218,12 @@ namespace MetroFramework.Components
                 ApplyTheme(metroComponent);
             }
 
+            IMetroForm metroForm = ctrl as IMetroForm;
+            if (metroForm != null)
+            {
+                ApplyTheme(metroForm);
+            }
+
             TabControl tabControl = ctrl as TabControl;
             if (tabControl != null)
             {
@@ -249,6 +255,11 @@ namespace MetroFramework.Components
         }
 
         private void ApplyTheme(IMetroComponent component)
+        {
+            component.StyleManager = this;
+        }
+
+        private void ApplyTheme(IMetroForm component)
         {
             component.StyleManager = this;
         }

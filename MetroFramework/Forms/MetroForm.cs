@@ -1006,6 +1006,8 @@ namespace MetroFramework.Forms
 
         private void CreateShadow()
         {
+            return;
+
             switch (ShadowType)
             {
                 case MetroFormShadowType.Flat:
